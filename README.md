@@ -7,3 +7,6 @@
 
 ### Video recording for step 6
 [//]: # ( https://asciinema.org/a/vuqZluTs3kUtyuFrlGBnsPLD7)
+
+### Video recording for step 7
+[//]: # ( https://asciinema.org/a/PuTr9xo55AvmKHnU4yqcOXi8K)

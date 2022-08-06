@@ -1,25 +1,19 @@
-import random
-from brain_games.cli import welcome_user
-
-import prompt
+from brain_games.repeated_steps import *
 
 
 def brain_even():
-    user_name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    for i in range(5, 8):
-        randon_number = random.randint(0, 100)
-        print("Question: " + str(randon_number))
-        user_answer = prompt.string("Your answer: ")
-        correct_answer = set_correct_answer(randon_number)
+    user_name = get_user_name_and_say_hello_to_user()
+    set_game_rules('Answer "yes" if the number is even, otherwise answer "no".')
+    for i in range(0, 3):
+        randon_value = random.randint(0, 100)
+        user_answer = get_user_answer(randon_value)
+        correct_answer = set_correct_answer(randon_value)
         if user_answer != correct_answer:
-            print(
-                "\"" + user_answer + "\"" + " is wrong answer ;(. Correct answer was " + "\"" + correct_answer + "\"" +
-                ".\nLet's try again, " + user_name + "!")
+            error_message(user_answer, user_name, correct_answer)
             return
         else:
-            print("Correct!")
-    print("Congratulations, " + user_name)
+            success_message()
+    congrats_to_user(user_name)
     return
 
 
@@ -29,3 +23,4 @@ def set_correct_answer(randon_number):
     else:
         correct_answer = 'no'
     return correct_answer
+

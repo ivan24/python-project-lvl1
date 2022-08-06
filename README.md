@@ -4,3 +4,6 @@
 ### Video recording for step 5 
 [//]: # (View the recording at:)
 [//]: # (    https://asciinema.org/a/lxIfq92u77hL87ebo8Q6AOUXu)
+
+### Video recording for step 6
+[//]: # ( https://asciinema.org/a/vuqZluTs3kUtyuFrlGBnsPLD7)

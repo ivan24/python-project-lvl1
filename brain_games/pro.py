@@ -36,5 +36,3 @@ def create_random_progression(random_position, random_length, start_value, commo
 
 def get_missing_value(start_value, common_difference, random_position):
     return start_value + random_position * common_difference
-
-

@@ -1,4 +1,3 @@
-import random
 from brain_games.repeated_steps import *
 
 

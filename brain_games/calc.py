@@ -12,12 +12,8 @@ def brain_calc():
         randon_value = str(first_randon_value) + " " + randon_operation_type + " " + str(second_random_value)
         user_answer = get_user_answer(randon_value)
         correct_answer = get_correct_answer(first_randon_value, second_random_value, randon_operation_type)
-        if user_answer.isdigit():
-            if int(user_answer) != correct_answer:
-                error_message(user_answer, user_name, correct_answer)
-                return
-            else:
-                success_message()
+        if int(user_answer) == correct_answer:
+            success_message()
         else:
             error_message(user_answer, user_name, correct_answer)
             return
@@ -27,6 +23,11 @@ def brain_calc():
 
 def get_correct_answer(first_randon_value, second_random_value, randon_operation_type):
     match randon_operation_type:
-        case "+": return first_randon_value + second_random_value
-        case "-": return first_randon_value - second_random_value
-        case "*": return first_randon_value * second_random_value
+        case "+":
+            return first_randon_value + second_random_value
+        case "-":
+            return first_randon_value - second_random_value
+        case "*":
+            return first_randon_value * second_random_value
+
+

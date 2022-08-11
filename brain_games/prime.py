@@ -20,13 +20,9 @@ def brain_prime():
 
 
 def set_correct_answer(randon_value):
-    if randon_value < 1:
-        return 'no'
-    if randon_value == 2:
-        return 'yes'
-    if randon_value % 2 == 0:
-        return 'no'
-    for i in range(2, int(sqrt(randon_value))+1):
-        if randon_value % i == 0:
-            return 'no'
-    return 'yes'
+    if randon_value > 1:
+        for i in range(2, randon_value):
+            if (randon_value % i) == 0:
+                return 'no'
+            else:
+                return 'yes'

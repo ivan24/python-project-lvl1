@@ -1,5 +1,6 @@
 import random
-from brain_games.cli import *
+import prompt
+from brain_games.cli import welcome_user
 
 
 def get_user_name_and_say_hello_to_user():

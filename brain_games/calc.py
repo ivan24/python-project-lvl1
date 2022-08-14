@@ -13,9 +13,10 @@ def brain_calc():
         second_random_value = create_random_value()
         operation_types = ["+", "-", "*"]
         randon_operation_type = random.choice(operation_types)
-        randon_value = str(first_randon_value) + " " + \
-                       randon_operation_type + "" \
-                       " " + str(second_random_value)
+        randon_value = \
+            str(first_randon_value) + " " + \
+            randon_operation_type + "" \
+            " " + str(second_random_value)
         user_answer = get_user_answer(randon_value)
         correct_answer = get_correct_answer(first_randon_value,
                                             second_random_value,

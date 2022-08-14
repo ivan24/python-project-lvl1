@@ -1,5 +1,7 @@
-from brain_games.repeated_steps import get_user_name_and_say_hello_to_user, set_game_rules, congrats_to_user
-from brain_games.repeated_steps import create_random_value, get_user_answer, error_message, success_message
+from brain_games.repeated_steps import get_user_name_and_say_hello_to_user
+from brain_games.repeated_steps import set_game_rules, congrats_to_user
+from brain_games.repeated_steps import create_random_value, get_user_answer
+from brain_games.repeated_steps import error_message, success_message
 import random
 
 
@@ -11,9 +13,13 @@ def brain_calc():
         second_random_value = create_random_value()
         operation_types = ["+", "-", "*"]
         randon_operation_type = random.choice(operation_types)
-        randon_value = str(first_randon_value) + " " + randon_operation_type + " " + str(second_random_value)
+        randon_value = str(first_randon_value) + " " + \
+                       randon_operation_type + "" \
+                       " " + str(second_random_value)
         user_answer = get_user_answer(randon_value)
-        correct_answer = get_correct_answer(first_randon_value, second_random_value, randon_operation_type)
+        correct_answer = get_correct_answer(first_randon_value,
+                                            second_random_value,
+                                            randon_operation_type)
         if int(user_answer) == correct_answer:
             success_message()
         else:
@@ -23,7 +29,8 @@ def brain_calc():
     return
 
 
-def get_correct_answer(first_randon_value, second_random_value, randon_operation_type):
+def get_correct_answer(first_randon_value, second_random_value,
+                       randon_operation_type):
     match randon_operation_type:
         case "+":
             return first_randon_value + second_random_value
@@ -31,5 +38,3 @@ def get_correct_answer(first_randon_value, second_random_value, randon_operation
             return first_randon_value - second_random_value
         case "*":
             return first_randon_value * second_random_value
-
-

@@ -25,9 +25,9 @@ def congrats_to_user(user_name):
 
 
 def error_message(user_answer, user_name, correct_answer):
-    print(
-        "\"" + str(user_answer) + "\"" + " is wrong answer ;(. Correct answer was " + "\"" + str(correct_answer)
-        + "\"" + ".\nLet's try again, " + str(user_name) + "!")
+    print("\"" + str(user_answer) + "\"" + " is wrong answer ;(."
+          " Correct answer was " + "\"" + str(correct_answer)
+          + "\"" + ".\nLet's try again, " + str(user_name) + "!")
 
 
 def success_message():

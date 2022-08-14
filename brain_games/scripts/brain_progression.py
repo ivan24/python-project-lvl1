@@ -1,4 +1,4 @@
-from brain_games.pro import *
+from brain_games.pro import brain_pro
 
 
 def main():

@@ -1,11 +1,14 @@
-from brain_games.repeated_steps import get_user_name_and_say_hello_to_user, set_game_rules, congrats_to_user
-from brain_games.repeated_steps import get_user_answer, error_message, success_message
+from brain_games.repeated_steps import get_user_name_and_say_hello_to_user
+from brain_games.repeated_steps import set_game_rules, congrats_to_user
+from brain_games.repeated_steps import get_user_answer, error_message
+from brain_games.repeated_steps import success_message
 import random
 
 
 def brain_prime():
     user_name = get_user_name_and_say_hello_to_user()
-    set_game_rules('Answer "yes" if given number is prime. Otherwise answer "no".')
+    set_game_rules('Answer "yes" if given number'
+                   ' is prime. Otherwise answer "no".')
     for i in range(0, 3):
         randon_value = random.randint(0, 100)
         user_answer = get_user_answer(randon_value)

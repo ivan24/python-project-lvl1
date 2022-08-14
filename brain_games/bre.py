@@ -1,5 +1,7 @@
-from brain_games.repeated_steps import get_user_name_and_say_hello_to_user, set_game_rules, congrats_to_user
-from brain_games.repeated_steps import get_user_answer, error_message, success_message
+from brain_games.repeated_steps import get_user_name_and_say_hello_to_user
+from brain_games.repeated_steps import set_game_rules, congrats_to_user
+from brain_games.repeated_steps import get_user_answer, error_message
+from brain_games.repeated_steps import success_message
 import random
 
 
@@ -25,4 +27,3 @@ def set_correct_answer(randon_number):
     else:
         correct_answer = 'no'
     return correct_answer
-
